@@ -319,7 +319,7 @@ html{
     }
     .topnavlien{
         padding-left: 0;
-        margin-left: 10px;
+        margin-left: 20px;
     }
     .imgnav{
         margin-right: 10px;
@@ -382,6 +382,37 @@ html{
     }
     .navigation{
          margin-bottom: 20px;
+    }
+    .services{
+        margin-top: 0;
+    }
+    .broderie{
+        width: 300px;
+    }
+    .broderie img{
+        width: 220px;
+        height: 170px;
+    }
+    .flocage{
+        width: 300px;
+    }
+    .flocage img{
+        width: 220px;
+        height: 170px;
+    }
+    .mv{
+        width: 300px;
+    }
+    .mv img{
+        width: 170px;
+        height: 170px;
+    }
+    .vhv{
+        width: 300px;
+    }
+    .vhv img{
+        width: 220px;
+        height: 170px;
     }
 }
 .navigation{
