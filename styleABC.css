@@ -1,0 +1,434 @@
+html{
+    position: relative; 
+    min-height: 100%;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.topnav{
+    list-style: none;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 50px;
+}
+.topnavlien{
+    padding-left: 30%;
+}
+.imgnav{
+    margin-right: 31%;
+}
+.topnavlien li a {
+    color: white;
+    float: left;
+    margin: 15px 5px 0px 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.topnav a:hover{
+    font-size: 20px;
+    transition: 0.3s;
+}
+.topnav img{
+    filter: grayscale(100%);
+    transition: 0.3s;
+    margin-top: 10px;
+    margin-right: 10px
+}
+.topnav img:hover{
+    filter: grayscale(0%);
+    transition: 0.3s;
+}
+.container-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);  
+    padding-bottom: 20px;
+}
+.titre{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);  
+}
+.titre img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 300px;
+    height: auto;
+}
+.titre p{
+    margin-top: 10px;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    height: 40px;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+.contact-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+.contact{
+    flex-direction: column;
+    height: 400px;
+    width: 500px;
+    background-color: #a9a9a9;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.contact input[type=text] {
+    width: 300px;
+    margin-top: 10px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  }
+.contact input[type=text]:focus {
+    border: 3px solid #555;
+  }
+.contact textarea {
+    margin-top: 10px;
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+  }
+.contact input[type=submit] {
+    background-color: #000101;
+    border: none;
+    width: 100%;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+.contact input[type=submit]:hover {
+    background-color: #444444;
+    transition: 0.4s;
+}
+.main-content{
+    display: flex;
+    width: 90%;
+    margin: 20px auto 270px auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 50vh;
+}
+.main-content a{
+    text-decoration: none;
+    color: #000101;
+}
+.servicep{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: larger;
+    margin-top: 20px;
+}
+.services{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.broderie{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 30%;
+    background-color: rgb(216, 216, 216);
+}
+.broderie img{
+    height: 300px;
+    width: 450px;
+    margin: 10px;
+}
+.flocage{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 30%;
+    background-color: rgb(216, 216, 216);
+}
+.flocage img{
+    height: 300px;
+    width: 450px;
+    margin: 10px;
+}
+.mv{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 30%;
+    background-color: rgb(216, 216, 216);
+}
+.mv img{
+    height: 300px;
+    width: 250px;
+    margin: 10px;
+}
+.vhv{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 30%;
+    background-color: rgb(216, 216, 216);
+}
+.vhv img{
+    height: 300px;
+    width: 450px;
+    margin: 10px;
+}
+.photo{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+.produit-carte{
+    height: 400px;
+    text-align: center;
+    min-width: 480px;
+    width: 480px;
+    transition: 0.3s;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+.produit-carte:hover{
+    box-shadow: 5px 5px 5px black;
+    transition: 0.3s;
+}
+.produit-carte img{
+    width: 55%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.produit{
+    margin-top: 50px;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+
+}
+.photo-produit img{
+    height: 100%;
+    width: 100%;
+}
+.photo-produit{
+    height: 90%;
+    width: 50%;
+}
+.info-produit{
+    margin-left: 1%;
+    height: 100%;
+    width: 50%;
+}
+.footer{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 250px;
+    background-color:rgb(0, 0, 0);
+}
+.high-footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 25px;
+}
+@media screen and (min-width: 430px) {
+    .topnavlien{
+        margin-left: 20px;
+    }
+    
+}
+/*Tablettes*/
+@media screen and (min-width: 430px) and (max-width: 1000px) {
+    .titre img{
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: auto;
+    }
+    .main-content{
+        margin-bottom: 400px;
+    }
+    .produit-carte{
+        height: 200px;
+        min-width: 280px;
+        width: 280px;
+    }
+    .produit-carte h1{
+        font-size: 20px;
+    }
+    .photo-produit{
+        margin-bottom: 30px;
+    }
+    .topnavlien{
+        padding-left: 0;
+    }
+    .imgnav{
+        margin-right: 0;
+    }
+    .produit{
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+/*Telephones*/
+@media screen and (max-width: 430px) {
+    .contact-parent{
+        margin-bottom: 700px;
+    }
+    .high-footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    .topnavlien{
+        padding-left: 0;
+        margin-left: 10px;
+    }
+    .imgnav{
+        margin-right: 10px;
+    }
+    .topnavlien li a{
+        float: left;
+        margin: 15px 5px 0px 5px;
+    }
+    .titre img{
+        margin-left: 60px;
+        margin-right: auto;
+        width: 300px;
+        height: auto;
+    }
+    .form{
+        margin-bottom: 30px;
+    }
+    .main-content{
+        width: 100%;
+        margin-bottom: 700px;
+    }
+    .produit{
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .produit-carte{
+        min-width: 200px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    .produit-carte img{
+        width: 300px;
+    }
+    .photo-produit {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .info-produit{
+        text-align: center;
+    }
+    .high-footer hr{
+        margin: auto;
+    }
+    .navigation{
+        margin-bottom: 20px;
+    }
+    .navigation p{
+        display: inline;
+    }
+    .horaire{
+         margin-bottom: 20px;
+    }
+    .info-footer{
+         margin-bottom: 20px;
+    }
+    .navigation{
+         margin-bottom: 20px;
+    }
+}
+.navigation{
+    min-width: 20%;
+}
+.navigation a{
+    color: #ffffff;
+}
+.horaire{
+    min-width: 20%;
+}
+.info-footer{
+    min-width: 20%;
+}
+.info-footer img{
+    filter: grayscale(100%);
+    transition: 0.3s;
+    margin-top: 10px;
+}
+.info-footer img:hover{
+    filter: grayscale(0%);
+    transition: 0.3s;
+}
+.ligne-footer{
+    align-items: center;
+    background-color: #ffffff;
+    height: 50%;
+    width: 1px;
+    margin-top: 50px;
+    margin-right: 5%;
+}
+.frame-map{
+    min-width: 20%;
+}
+.low-footer{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(27, 27, 27);
+}
+.low-footer a{
+    color: #ffffff;
+    margin-right: 25px;
+    font-size: 13px;
+    margin-left: 10px;
+}

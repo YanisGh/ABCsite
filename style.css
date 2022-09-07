@@ -1,0 +1,136 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height:100%;
+}
+nav{
+    width: 100%;
+    height: 500px;
+    background-color: #000000;
+}
+nav img{
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+nav img:hover{
+    transition: 0.3s;
+    height: 32px;
+    width: 32px;
+}
+nav ul{
+    float: right;
+}
+nav ul li{
+    list-style: none;
+    position: relative;
+    color: white
+}
+
+nav ul li {
+    display: block;
+    color: white;
+    padding: 20px 16px;
+    text-decoration: none;
+    float: left;
+    position: relative;
+}
+nav ul li img{
+    background-color: black;
+    height: 60px;
+    width: 120px;
+    float: left;
+    padding: 0 0px;
+
+}
+.container-main{
+    display: flex;
+    background-color: white;
+    height: 88%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.desc{
+    color: white;
+    background-color: black;
+    height: 60%;
+    width: 30%;
+}
+.desc p{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 40px;
+}
+.desc img{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
+    height: 30px;
+}
+.photo{
+    color: white;
+    background-color: black;
+    height: 60%;
+    width: 60%;
+}
+.photo a img{
+    height: 50px;
+    width: 120px;
+}
+.footer{
+    position: relative;
+    display: flex;
+    background-color: black;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    color:white; 
+    flex-direction: column;
+    align-items: center;
+}
+.footer hr{
+    margin-top: 50px;
+    width: 35%;
+    color: rgb(8, 8, 8);
+    background-color: rgb(37, 35, 35);
+}
+.inner-footer-haut{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 150px;
+    width: 1000px;
+    margin-top: 10px;
+}
+.info-footer-1,.info-footer-2,.info-footer-3{
+    color: white;
+    height: 90%;
+    width: 200px;
+    margin: 7px 20px 5px;
+}
+.info-footer-1 p{
+    margin: 5px 0px;
+}
+.ligne-1,.ligne-2{
+    margin-top: 10px;
+    background-color: white;
+    width: 1px;
+    height: 80%;
+}
+.inner-footer-bas{
+    text-align: center;
+    width: 40%;
+    margin-top: 10px;
+    font-size: 9px;
+}
+.test{
+    height: 1000px;
+}
