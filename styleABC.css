@@ -158,7 +158,7 @@ html{
     padding: 10px;
     border-radius: 5px;
     margin-top: 30px;
-    width: 30%;
+    min-width: 30%;
     background-color: rgb(216, 216, 216);
 }
 .broderie img{
@@ -170,7 +170,7 @@ html{
     padding: 10px;
     border-radius: 5px;
     margin-top: 30px;
-    width: 30%;
+    min-width: 30%;
     background-color: rgb(216, 216, 216);
 }
 .flocage img{
@@ -182,7 +182,7 @@ html{
     padding: 10px;
     border-radius: 5px;
     margin-top: 30px;
-    width: 30%;
+    min-width: 30%;
     background-color: rgb(216, 216, 216);
 }
 .mv img{
@@ -194,7 +194,7 @@ html{
     padding: 10px;
     border-radius: 5px;
     margin-top: 30px;
-    width: 30%;
+    min-width: 30%;
     background-color: rgb(216, 216, 216);
 }
 .vhv img{
