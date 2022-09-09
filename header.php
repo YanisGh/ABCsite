@@ -9,6 +9,7 @@
 <header>
   <div class="topnav">
       <div class="topnavlien">
+        <li><a href="pageconnexion.php"><img style="margin: 0px;"src="login.png" height="20" width="20"/></a></li>
         <li><a href="index.php">Accueil</a></li>
         <li><a href="produits.php">Produits</a></li>
         <li><a href="https://m.facebook.com/ABC-Textile-2074213322790542/photos/?ref=py_c&mt_nav=0" target="_blank">Galerie</a></li>

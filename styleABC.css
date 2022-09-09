@@ -265,12 +265,6 @@ html{
     justify-content: space-around;
     padding-top: 25px;
 }
-@media screen and (min-width: 430px) {
-    .topnavlien{
-        margin-left: 20px;
-    }
-    
-}
 /*Tablettes*/
 @media screen and (min-width: 430px) and (max-width: 1000px) {
     .titre img{
