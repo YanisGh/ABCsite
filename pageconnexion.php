@@ -2,6 +2,7 @@
 session_start();
 include "header.php";
 include "conn.php";
+//Si l'on appuie sur le bouton pour se connecter
 if(isset($_POST["ok"]))
     {
         $nomutilisateur = $_POST["nomutilisateur"];
@@ -17,6 +18,7 @@ if(isset($_POST["ok"]))
             echo "mauvais identifiants";
         }
     }
+    //-- pour la deconnexion
     if(isset($_POST["deconnexion"]))
     {
         session_destroy();
