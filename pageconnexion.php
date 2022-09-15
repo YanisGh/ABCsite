@@ -18,7 +18,7 @@ if(isset($_POST["ok"]))
             echo "mauvais identifiants";
         }
     }
-    //-- pour la deconnexion
+    //--pour la deconnexion
     if(isset($_POST["deconnexion"]))
     {
         session_destroy();
