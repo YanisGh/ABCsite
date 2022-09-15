@@ -31,20 +31,22 @@ if(isset($_POST["ok"]))
 <body>
   <div class="main-content">
     <div class="connexion">
-        <h1>Espace employé</h1> 
-        <form action="" method="post">
-            <input type="text" name="nomutilisateur" placeholder="Nom d'utilisateur employé">
-            <input type="text" name="mdp" placeholder="Mot de passe">
-            <input type="submit" value="Se connecter" name="ok">
-        </form>
-    </div>
-    <div class="connexion">
-        <h1>Espace employé</h1> 
-        <form action="" method="post">
-            <input type="text" name="nomutilisateur" placeholder="Nom d'utilisateur employé">
-            <input type="text" name="mdp" placeholder="Mot de passe">
-            <input type="submit" value="Se deconnecter" name="deconnexion">
-        </form>
+      <?php
+          if(isset($_SESSION["loggedIn"])){
+            if($_SESSION["loggedIn"] == true){?>
+              <h1>Espace employé</h1> 
+              <form action="" method="post">
+                  <input type="submit" value="Se deconnecter" name="deconnexion">
+              </form>
+            <?php }
+            } else { ?>
+            <h1>Espace employé</h1> 
+            <form action="" method="post">
+              <input type="text" name="nomutilisateur" placeholder="Nom d'utilisateur employé">
+              <input type="text" name="mdp" placeholder="Mot de passe">
+              <input type="submit" value="Se connecter" name="ok">
+            </form>
+            <?php } ?>
     </div>
   </div>
 <?php include "footer.php"; ?>
