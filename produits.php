@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php include "header.php"; include "conn.php"; ?>
+<?php session_start(); include "header.php"; include "conn.php"; ?>
 <body>
   <div class="form">
     <form action="" method="post">
-          <a href="uploadArticles.php">upload article</a>
+          <?php
+          if(isset($_SESSION["loggedIn"])){
+            if($_SESSION["loggedIn"] == true){
+              echo '<a href="uploadArticles.php">upload article</a>';
+            }
+          }
+          ?>
           <input type="text" name="nomproduit" placeholder="Nom de l'article">
           <select name="categorie">
                   <option value="vide">Trier par: </option>
