@@ -6,9 +6,9 @@
     <form action="" method="post">
           <?php
           if(isset($_SESSION["loggedIn"])){
-            if($_SESSION["loggedIn"] == true){
-              echo '<a href="uploadArticles.php">upload article</a>';
-            }
+            if($_SESSION["loggedIn"] == true){ ?>
+            <a href="uploadArticles.php">upload article</a>
+            <?php }
           }
           ?>
           <input type="text" name="nomproduit" placeholder="Nom de l'article">
@@ -47,7 +47,8 @@
         $resReq = mysqli_query($id, $req);
     }if(!isset($_POST["ok"]))
     {
-      $req = "select * from produits RIGHT JOIN imgproduits ON produits.id = imgproduits.id";
+      //RIGHT JOIN POUR LES PHOTO SANS PRODUIT, LEFT POUR VERSA
+      $req = "SELECT * from produits INNER JOIN imgproduits ON produits.id = imgproduits.id";
       $resReq = mysqli_query($id, $req);
     }
         ?>

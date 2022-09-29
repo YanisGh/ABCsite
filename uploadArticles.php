@@ -59,16 +59,24 @@ if (isset($_POST['ok'])){
 <html lang="fr">
 <?php include "header.php"; ?>
 <body>
-<img style="margin-left: 30%"width="40%" src="locaux.png">
-  <div class="main-content">
-      <form action="" method="POST" enctype="multipart/form-data">
-            Nom : <input type="text" name="nom" ><br><br>
-            Description : <input type="text" name="descproduit"><br><br>
-            Categorie : <input type="text" name="categorie" ><br><br>
-            Prix <input type="text" name="prix"> €<br><br>
-          <input type="file" name="photo" required>
-          <button type="submit" name="ok">Ok</button> 
-  </div>
+    <?php
+    if(isset($_SESSION["loggedIn"])){
+    if($_SESSION["loggedIn"] == true){?>
+    <div class="main-content">
+        <div class="contact">
+            <form action="" method="POST" enctype="multipart/form-data">
+                Nom : <input type="text" name="nom" ><br><br>
+                Description : <textarea name="descproduit"></textarea><br><br>
+                Categorie : <input type="text" name="categorie" ><br><br>
+                Prix <input type="text" name="prix"> €<br><br>
+            <input type="file" name="photo" required>
+            <button type="submit" name="ok">Ok</button> 
+        </div>
+    </div>
+          <?php
+    } else header('Location:index.php');
+  } else header('Location:index.php');
+?>
 <?php include "footer.php"; ?>
 </body>
 </html>
