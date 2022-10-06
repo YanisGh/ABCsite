@@ -7,6 +7,7 @@ if(isset($_GET['id'])){
   $idObtenu = true;
   $idProduit = mysqli_real_escape_string($id, $_GET['id']);
 }
+//Pour modifier 
 if (isset($_POST['okModif'])){
   $nomMAJ = $_POST["nomUpdate"];
   $descMAJ = $_POST["descproduitUpdate"];
@@ -19,13 +20,21 @@ if (isset($_POST['okModif'])){
       echo "Error updating record: " . $id->error;
     }  
   }
+  //Pour supprimer
   if (isset($_POST['okSupp'])){
-    $reqSupp = "DELETE FROM produits WHERE id='$idProduit'";
-    if ($id->query($reqSupp) === TRUE) {
-      echo "<center>Produit Supprimé</center>";
+    $photoNom = $_POST["photoNom"];
+    $reqSuppImg = "DELETE FROM imgproduits WHERE id = '$idProduit'";
+    if ($id->query($reqSuppImg) === TRUE) {
+      unlink("images/".$photoNom);
+      $reqSuppProd = "DELETE FROM produits WHERE id = '$idProduit'";
+      if ($id->query($reqSuppProd) === TRUE) {
+        echo "<center>Produit Supprimé</center>";
+      } else {
+        echo "Error updating record: " . $id->error;
+      }
     } else {
       echo "Error updating record: " . $id->error;
-    }
+    }  
   }
 ?>
 
@@ -84,6 +93,7 @@ if (isset($_POST['okModif'])){
                 });
               </script>
               <form action="" method="POST">
+              <input type="hidden" value="<?php echo $ligne['nomIMG']; ?>" name="photoNom">
               <button class="button buttonSupp" type="submit" name="okSupp">Supprimer l'article</button>
               </form>
                 <?php }
@@ -93,8 +103,8 @@ if (isset($_POST['okModif'])){
           </div>
       </div>
   <?php } ?>
-<?php }else{
-  echo "Probleme rencontré";
+<?php }else {
+  die("Probleme rencontrée");
 }
 ?>
 <?php include "footer.php"; ?>

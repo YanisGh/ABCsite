@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php include "header.php"; ?>
+<?php include "header.php"; include "conn.php" ?>
 <body>
   <div class="main-content">
     <div class="servicep">
@@ -10,29 +10,39 @@
         <div class="broderie">
         <p>Broderie</p>
         <img src="services/broderier.jpg">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Sed consectetur dui eros, nec ornare lectus posuere blandit.</p>
         </div>
         <div class="flocage">
         <p>Flocage</p>
         <img src="services/flocage.jpg">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Sed consectetur dui eros, nec ornare lectus posuere blandit.</p>
         </div>
         <div class="mv">
         <p>Marquages sur véhicules</p>
         <img src="services/mv.jpg">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Sed consectetur dui eros, nec ornare lectus posuere blandit.</p>
         </div>
         <div class="vhv">
         <p>Vêtements haute visibilité</p>
         <img src="services/vhv.jpg">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Sed consectetur dui eros, nec ornare lectus posuere blandit.</p>
         </div>
       </div>
     </div>
+    <div class="produits-acceuil-parent">
+        <div class="produits-acceuil-titre">
+          <p>Produits</p>
+        </div>
+        <div class="produits-acceuil">
+          <?php 
+          $req = "SELECT * from produits INNER JOIN imgproduits ON produits.id = imgproduits.id ORDER by rand() limit 2;";
+          $resReq = mysqli_query($id, $req);
+          $lignes = mysqli_fetch_all($resReq, MYSQLI_BOTH);
+            foreach($lignes as $ligne){ ?>
+                <a href="PageProduits.php?id=<?php echo $ligne['id']?>">
+                <?php echo "<img src='images/".$ligne['nomIMG']."'>";?>
+            <?php } ?>
+        </div>
+      <form action="produits.php">
+        <button class="button">Voir +</button>
+      </form>
+      </div>
   </div>
 <?php include "footer.php"; ?>
 </body>

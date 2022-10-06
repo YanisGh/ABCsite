@@ -147,11 +147,12 @@ html{
     margin-top: 20px;
 }
 .services{
+    background-color: #000000;
     margin-top: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     text-align: center;
 }
 .broderie{
@@ -159,7 +160,7 @@ html{
     border-radius: 5px;
     margin-top: 30px;
     min-width: 30%;
-    background-color: rgb(216, 216, 216);
+    color: #f8f8f8;
 }
 .broderie img{
     height: 300px;
@@ -171,7 +172,7 @@ html{
     border-radius: 5px;
     margin-top: 30px;
     min-width: 30%;
-    background-color: rgb(216, 216, 216);
+    color: #f8f8f8;
 }
 .flocage img{
     height: 300px;
@@ -182,8 +183,9 @@ html{
     padding: 10px;
     border-radius: 5px;
     margin-top: 30px;
+    margin-bottom: 30px;
     min-width: 30%;
-    background-color: rgb(216, 216, 216);
+    color: #f8f8f8;
 }
 .mv img{
     height: 300px;
@@ -194,13 +196,31 @@ html{
     padding: 10px;
     border-radius: 5px;
     margin-top: 30px;
+    margin-bottom: 30px;
     min-width: 30%;
-    background-color: rgb(216, 216, 216);
+    color: #f8f8f8;
 }
 .vhv img{
     height: 300px;
     width: 450px;
     margin: 10px;
+}
+.produits-acceuil-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.produits-acceuil{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.produitsa{
+    display: flex;
+    flex-direction: row;
 }
 .photo{
     background-color: aquamarine;
@@ -369,8 +389,16 @@ html{
         width: 100%;
         margin-bottom: 30px;
     }
+    .photo-produit img {
+        height: 100%;
+        width: 100%;
+    }
     .info-produit{
         text-align: center;
+        width: 80%;
+    }
+    .info-produit hr{
+        width: 90%;
     }
     .high-footer hr{
         margin: auto;
@@ -391,7 +419,7 @@ html{
          margin-bottom: 20px;
     }
     .services{
-        margin-top: 0;
+        margin-top: 25px;
     }
     .broderie{
         width: 300px;
