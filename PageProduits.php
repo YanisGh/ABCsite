@@ -50,7 +50,7 @@ if (isset($_POST['okModif'])){
       foreach($lignes as $ligne){ ?>
         <div class="produit">
           <div class="photo-produit">
-            <?php echo "<img src='images/".$ligne['nomIMG']."'>";?>
+            <?php echo "<img src='images/vetements/".$ligne['nomIMG']."'>";?>
           </div>
           <div class="info-produit">
             <p><?php echo "<i>reference article : n°".$ligne['id']."</i>"; ?></p><br>

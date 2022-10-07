@@ -58,7 +58,7 @@
         foreach($lignes as $ligne){ ?>
           <div class="produit-carte">
             <a href="PageProduits.php?id=<?php echo $ligne['id']?>">
-            <?php echo "<img src='images/".$ligne['nomIMG']."'>";?>
+            <?php echo "<img src='images/vetements/".$ligne['nomIMG']."'>";?>
             <br><hr style="width: 80%; margin-left: 10%;"><br>
             <p><h1><?php echo $ligne['nomproduit']; ?></h1></p><br>
             <p><?php echo $ligne['categorie']; ?></p>

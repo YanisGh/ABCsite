@@ -9,19 +9,19 @@
       <div class="services">
         <div class="broderie">
         <p>Broderie</p>
-        <img src="services/broderier.jpg">
+        <img src="images/services/broderier.jpg">
         </div>
         <div class="flocage">
         <p>Flocage</p>
-        <img src="services/flocage.jpg">
+        <img src="images/services/flocage.jpg">
         </div>
         <div class="mv">
         <p>Marquages sur véhicules</p>
-        <img src="services/mv.jpg">
+        <img src="images/services/mv.jpg">
         </div>
         <div class="vhv">
         <p>Vêtements haute visibilité</p>
-        <img src="services/vhv.jpg">
+        <img src="images/services/vhv.jpg">
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@
           $lignes = mysqli_fetch_all($resReq, MYSQLI_BOTH);
             foreach($lignes as $ligne){ ?>
                 <a href="PageProduits.php?id=<?php echo $ligne['id']?>">
-                <?php echo "<img src='images/".$ligne['nomIMG']."'>";?>
+                <?php echo "<img src='images/vetements/".$ligne['nomIMG']."'>";?>
             <?php } ?>
         </div>
       <form action="produits.php">
