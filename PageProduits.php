@@ -25,7 +25,7 @@ if (isset($_POST['okModif'])){
     $photoNom = $_POST["photoNom"];
     $reqSuppImg = "DELETE FROM imgproduits WHERE id = '$idProduit'";
     if ($id->query($reqSuppImg) === TRUE) {
-      unlink("images/".$photoNom);
+      unlink("images/vetements/".$photoNom);
       $reqSuppProd = "DELETE FROM produits WHERE id = '$idProduit'";
       if ($id->query($reqSuppProd) === TRUE) {
         echo "<center>Produit Supprimé</center>";

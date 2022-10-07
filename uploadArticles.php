@@ -28,7 +28,7 @@ if (isset($_POST['ok'])){
             if ($photoTaille < 500000){
               //var_dump($nom, $descproduit, $categorie, $prix);
                 $photoNomFinal = strtolower($photoNom);
-                $DestinationImg = 'images/'.$photoNomFinal;
+                $DestinationImg = 'images/vetements/'.$photoNomFinal;
                 move_uploaded_file($photoTmpNom, $DestinationImg);
                 $result=$id->prepare("INSERT INTO produits(nomproduit,descproduit,categorie,prix) VALUES (?,?,?,?)");
                 $result->bind_param('ssss',$nom, $descproduit, $categorie, $prix);
