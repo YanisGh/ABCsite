@@ -28,7 +28,7 @@ if (isset($_POST['ok'])){
             if ($photoTaille < 500000){
               //var_dump($nom, $descproduit, $categorie, $prix);
                 $photoNomFinal = strtolower($photoNom);
-                $DestinationImg = 'images/vetements/'.$photoNomFinal;
+                $DestinationImg = 'images/vetements/ '.$photoNomFinal;
                 move_uploaded_file($photoTmpNom, $DestinationImg);
                 $result=$id->prepare("INSERT INTO produits(nomproduit,descproduit,categorie,prix) VALUES (?,?,?,?)");
                 $result->bind_param('ssss',$nom, $descproduit, $categorie, $prix);
@@ -43,15 +43,15 @@ if (isset($_POST['ok'])){
                 }              
             }
             else{
-                echo "Image".$photoNomFinal."trop lourde";
+                echo "Image".$photoNom."trop lourde";
             }
         }
         else {
-            echo "Erreur lors du téléchargement de l'image".$photoNomFinal;
+            echo "Erreur lors du téléchargement de l'image".$photoNom;
         }
     }
     else{
-        echo "Le type de fichier de l'image ".$photoNomFinal." n'est pas autorisé";
+        echo "Le type de fichier de l'image ".$photoNom." n'est pas autorisé";
     }
 }
 ?>
