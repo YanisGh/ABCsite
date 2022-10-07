@@ -32,7 +32,11 @@ CREATE TABLE IF NOT EXISTS `galerie` (
   `image_id` int NOT NULL AUTO_INCREMENT,
   `image` blob,
   PRIMARY KEY (`image_id`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+=======
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+>>>>>>> b67b030e6825ef9992c32e7a5344cd37b4dabe23
 
 --
 -- Déchargement des données de la table `galerie`
@@ -54,7 +58,11 @@ CREATE TABLE IF NOT EXISTS `imgproduits` (
   `id` int DEFAULT NULL,
   PRIMARY KEY (`imgID`),
   KEY `idproduits` (`id`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM AUTO_INCREMENT=77 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+=======
+) ENGINE=MyISAM AUTO_INCREMENT=77 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+>>>>>>> b67b030e6825ef9992c32e7a5344cd37b4dabe23
 
 --
 -- Déchargement des données de la table `imgproduits`
@@ -115,7 +123,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `rang` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `nomutilisateur` (`nomutilisateur`)
+<<<<<<< HEAD
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+=======
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+>>>>>>> b67b030e6825ef9992c32e7a5344cd37b4dabe23
 
 --
 -- Déchargement des données de la table `users`
