@@ -280,6 +280,10 @@ html{
 .buttonSupp{
     background-color: red;
 }
+.buttonSearch{
+    padding: 8px 15px;
+    cursor:pointer;
+}
 .footer{
     color: white;
     display: flex;

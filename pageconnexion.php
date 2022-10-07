@@ -34,13 +34,13 @@ if(isset($_POST["ok"]))
       <?php
           if(isset($_SESSION["loggedIn"])){
             if($_SESSION["loggedIn"] == true){?>
-              <h1>Espace employé</h1> 
+              <h1>Éspace employé</h1> 
               <form action="" method="post">
                   <input type="submit" value="Se deconnecter" name="deconnexion">
               </form>
             <?php }
             } else { ?>
-            <h1>Espace employé</h1> 
+            <h1>Éspace employé</h1> 
             <form action="" method="post">
               <input type="text" name="nomutilisateur" placeholder="Nom d'utilisateur employé">
               <input type="text" name="mdp" placeholder="Mot de passe">

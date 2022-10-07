@@ -9,11 +9,10 @@
 <header>
   <div class="topnav">
       <div class="topnavlien">
-        <li><a href="pageconnexion.php"><img style="margin: 0px;"src="images/login.png" height="20" width="20"/></a></li>
         <li><a href="index.php">Accueil</a></li>
         <li><a href="produits.php">Produits</a></li>
         <li><a href="https://m.facebook.com/ABC-Textile-2074213322790542/photos/?ref=py_c&mt_nav=0" target="_blank">Galerie</a></li>
-        <li><a href="contact.php">Contact</a></li>
+        <!--FIX LE FORMULAIRE <li><a href="contact.php">Contact</a></li>!-->
       </div>
       <div class="imgnav">
         <li style="float: right;"><a href="https://m.facebook.com/ABC-Textile-2074213322790542/?ref=py_c" target="_blank"><img src="images/face.png" height="25" width="25"/></a></li>

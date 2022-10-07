@@ -20,7 +20,7 @@
           </select>
           <input type="radio" name="tri" value="asc" checked> Croissant  
           <input type="radio" name="tri" value="desc"> Decroissant
-          <input type="submit" value="Rechercher" name="ok">
+          <button class="button buttonSearch" type="submit" name="ok">Rechercher</button>
     </form>
   </div>
 
