@@ -381,6 +381,14 @@ html{
         margin-right: 0;
         margin-bottom: 50px;
     }
+    .produits-acceuil-parent{
+     width: 100%;
+    }
+    .produits-acceuil img{
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
     .produit-carte img{
         width: 300px;
     }
