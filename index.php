@@ -37,6 +37,7 @@
             foreach($lignes as $ligne){ ?>
                 <a href="PageProduits.php?id=<?php echo $ligne['id']?>">
                 <?php echo "<img src='images/vetements/".$ligne['nomIMG']."'>";?>
+                </a>
             <?php } ?>
         </div>
       <form action="produits.php">

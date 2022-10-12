@@ -93,7 +93,7 @@ html{
     align-items: center;
     display: flex;
 }
-.contact input[type=text] {
+.contact input[type=text], input[type=email] {
     width: 300px;
     margin-top: 10px;
     padding: 12px 20px;
@@ -209,6 +209,7 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 
 }
 .produits-acceuil{
@@ -276,13 +277,13 @@ html{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    cursor: pointer;
 }
 .buttonSupp{
     background-color: red;
 }
 .buttonSearch{
     padding: 8px 15px;
-    cursor:pointer;
 }
 .footer{
     color: white;

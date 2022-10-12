@@ -1,12 +1,13 @@
 <?php
 
-if(isset($_POST["submit"])){
-    $mailoutel = $_POST['mailoutel'];
+if(isset($_POST["ok"])){
+    $mailSrc = $_POST['mailSrc'];
     $objet = $_POST['objet'];
     $message = $_POST['message'];
-    $mailTo = "contact@abc-textil.fr";
-    $header = "De: ".$mailoutel;
-    $txt = $mailoutel." vous a envoyé un e-mail depuis abc-textil.fr. \n\n".$message;
-    mail($mailTo, $objet, $txt, $header);
+    $headers = 'FROM: '.$mailSrc;
+    $txt = $mailSrc." vous a envoyé un e-mail depuis abc-textil.fr. \n\n".$message;
+    mail('contact@abc-textil.fr', $objet, $txt, $headers);
+ 	header('Location: contact.php?mailenvoye');
 }
-header('Location: contact.php?mailenvoye');
+
+?>
