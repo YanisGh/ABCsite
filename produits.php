@@ -1,6 +1,9 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
-<?php session_start(); include "header.php"; include "conn.php"; ?>
+<?php include "header.php"; include "conn.php"; ?>
 <body>
   <div class="form">
     <form action="" method="post">
@@ -30,25 +33,31 @@
         $tri = $_POST["tri"];
         $categorie = $_POST["categorie"];
         $nomproduit = $_POST["nomproduit"];
-        $req = "select * from produits RIGHT JOIN imgproduits ON produits.id = imgproduits.id";
+        $req = "select * from produits"; 
+        //RIGHT JOIN imgproduits ON produits.id = imgproduits.id";
 
         if($categorie == "vide"){
           $req = "SELECT * from produits 
-          RIGHT JOIN imgproduits 
-          ON produits.id = imgproduits.id 
+          /*RIGHT JOIN imgproduits 
+          ON produits.id = imgproduits.id*/
           WHERE nomproduit like '%$nomproduit%'";
         }else{
           $req = "SELECT * from produits 
-          RIGHT JOIN imgproduits 
-          ON produits.id = imgproduits.id
+          /*RIGHT JOIN imgproduits 
+          ON produits.id = imgproduits.id*/
           WHERE nomproduit like '%$nomproduit%' 
           order by $categorie $tri";
         }
         $resReq = mysqli_query($id, $req);
     }if(!isset($_POST["ok"]))
     {
+      //SELECT MIN(imgID), nomIMG FROM `imgproduits` WHERE `id` = 101;
       //RIGHT JOIN POUR LES PHOTO SANS PRODUIT, LEFT POUR VERSA
-      $req = "SELECT * from produits INNER JOIN imgproduits ON produits.id = imgproduits.id";
+      $req = "SELECT * from produits";
+      //SELECT imgID, nomIMG from produits INNER JOIN imgproduits 
+      //ON produits.id = imgproduits.id 
+      //where produits.id = 137 and imgproduits.imgID = (SELECT min(imgID) FROM imgproduits WHERE imgproduits.id = '137');
+      //INNER JOIN imgproduits ON produits.id = imgproduits.id";
       $resReq = mysqli_query($id, $req);
     }
         ?>
@@ -56,9 +65,13 @@
     <?php 
         $lignes = mysqli_fetch_all($resReq, MYSQLI_BOTH);
         foreach($lignes as $ligne){ ?>
+        <?php $idProduit = $ligne['id']; ?>
           <div class="produit-carte">
-            <a href="PageProduits.php?id=<?php echo $ligne['id']?>">
-            <?php echo "<img src='images/vetements/".$ligne['nomIMG']."'>";?>
+            <a href="PageProduits.php?id=<?php echo $idProduit ?>">
+            <?php $reqInfoIMG = "SELECT min(imgID), nomIMG FROM `imgproduits` WHERE `id` = $idProduit";
+            $resInfoIMG = mysqli_query($id, $reqInfoIMG);
+            $infoIMG = mysqli_fetch_array($resInfoIMG);
+            echo "<img src='images/vetements/".$infoIMG[1]."'>";?>
             <br><hr style="width: 80%; margin-left: 10%;"><br>
             <p><h1><?php echo $ligne['nomproduit']; ?></h1></p><br>
             <p><?php echo $ligne['categorie']; ?></p>

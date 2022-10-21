@@ -1,7 +1,9 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <?php
-session_start();
 include "header.php"; include "conn.php";
 if(isset($_GET['id'])){
   $idObtenu = true;
@@ -13,28 +15,26 @@ if (isset($_POST['okModif'])){
   $descMAJ = $_POST["descproduitUpdate"];
   $catMAJ = $_POST["categorieUpdate"];
   $prixMAJ = $_POST["prixUpdate"];
-  $reqMAJ = "UPDATE produits SET nomproduit='$nomMAJ', descproduit='$descMAJ', categorie='$catMAJ', prix='$prixMAJ' WHERE id='$idProduit'";
-    if ($id->query($reqMAJ) === TRUE) {
-      echo "<center>Produit mis a jour</center>";
-    } else {
-      echo "Error updating record: " . $id->error;
-    }  
+  $reqMAJ=$id->prepare("UPDATE `produits` SET `nomproduit`= ?, `descproduit`= ?, `categorie`= ?, `prix`= ? WHERE `id`= ?");
+  $reqMAJ->bind_param('sssdi',$nomMAJ, $descMAJ, $catMAJ , $prixMAJ, $idProduit);
+  $reqMAJ->execute();
+  echo "Produit mis à jour.";
   }
   //Pour supprimer
-  if (isset($_POST['okSupp'])){
-    $photoNom = $_POST["photoNom"];
-    $reqSuppImg = "DELETE FROM imgproduits WHERE id = '$idProduit'";
-    if ($id->query($reqSuppImg) === TRUE) {
-      unlink("images/vetements/".$photoNom);
-      $reqSuppProd = "DELETE FROM produits WHERE id = '$idProduit'";
-      if ($id->query($reqSuppProd) === TRUE) {
-        echo "<center>Produit Supprimé</center>";
-      } else {
-        echo "Error updating record: " . $id->error;
-      }
+if (isset($_POST['okSupp'])){
+  $photoNom = $_POST["photoNom"];
+  $reqSuppImg = "DELETE FROM imgproduits WHERE id = '$idProduit'";
+  if ($id->query($reqSuppImg) === TRUE) {
+    unlink("images/vetements/".$photoNom);
+    $reqSuppProd = "DELETE FROM produits WHERE id = '$idProduit'";
+    if ($id->query($reqSuppProd) === TRUE) {
+      echo "<center>Produit Supprimé</center>";
     } else {
       echo "Error updating record: " . $id->error;
-    }  
+    }
+  } else {
+    echo "Error updating record: " . $id->error;
+  }  
   }
 ?>
 
@@ -43,7 +43,7 @@ if (isset($_POST['okModif'])){
     <?php
     //On verifie l'id
     if($idObtenu == true){
-      $req = "SELECT * FROM produits RIGHT JOIN imgproduits ON produits.id = imgproduits.id where imgproduits.id = $idProduit";
+      $req = "SELECT * FROM produits RIGHT JOIN imgproduits ON produits.id = imgproduits.id where imgproduits.id = $idProduit LIMIT 1";
       $res = mysqli_query($id, $req);
       //$produit = mysqli_fetch_assoc($res);
       $lignes = mysqli_fetch_all($res, MYSQLI_BOTH);
