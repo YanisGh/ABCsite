@@ -15,3 +15,21 @@ utilisé pour optimiser ou ajouter des fonctionnalités.
 Le développement du site est à l'arrêt pour des raisons personnelles à l'entreprise. 
 Je me suis arrêté à l'affichage de plusieurs images pour un article, j'allais ensuite faire un carrousel dans la page d'accueil.
 Ce projet m'a pour l'instant permis de grandement m'améliorer en PHP, SQL et CSS, ainsi que de découvrir un peu de Javascript.
+
+EN :
+Postponed website for the company "Atelier 78". Code shared with the agreement of the manager. You can read the 'readme.txt' file for more information.
+
+About the project:
+The site is a platform for the company where they can show their clothing selling/flocking/embroidery services, and add, modify and delete their products.
+A system of administrators is also in place, where only the latter can have access to the aforementioned functionalities.
+Users can consult the different services of the company and send an e-mail about them via different forms, which change according to the service the user is looking for.
+
+The ability to make the share the code was kindly approved by the company manager.
+I work alone on this project, and with the manager using the Agile method.
+She is aware of all the progress of the project and can intervene on it at any time.
+I was not doing good at all in PHP but thanks to this project, I was able to really understand and improve.
+I regret not having started with Bootstrap/Symfony, because the CSS took me a lot of time which could have been
+used to optimize or add functionality.
+The development of the site is stopped for personal reasons to the company.
+I stopped at the display of several images for an article, then I was going to make a carousel in the home page.
+This project has so far allowed me to greatly improve in PHP, SQL and CSS, as well as to discover a little JavaScript.
