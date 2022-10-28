@@ -1,6 +1,11 @@
 # ABCsite
 Site (postponed) pour l'entreprise "Atelier 78". Code partagé avec l'accord de la responsable. Vous pouvez lire le fichier 'lisez-moi.txt" pour plus d'informations.  
 
+A propos du projet : 
+Le site est une plateforme pour l'entreprise où elle peut montrer ses services de vente/flocage/broderies de vetements, et y ajouter ses produits, les modifier et les supprimer. 
+Un système d'administrateurs est aussi en place, où seul ces derniers peuvent avoir accès aux fonctionnalités susmentionnées.
+Les utilisateurs peuvent consulter les différents services de l'entreprise et envoyer un mail à propos de ces derniers via différents formulaires, qui changent en fonction du service recherché.
+
 Le partage du code a été gracieusement approuvée par la responsable de l'entreprise. 
 Il faut savoir que je suis tout seul sur ce projet, je travaille avec la responsable en utilisant la méthode Agile.
 Elle est au courant de tous les avancements du projet et peut intervenir dessus à tout moment. 
