@@ -1,0 +1,9 @@
+Le partage du code a été gracieusement approuvée par la responsable de l'entreprise. 
+Il faut savoir que je suis tout seul sur ce projet, je travaille avec la responsable en utilisant la méthode Agile.
+Elle est au courant de tous les avancements du projet et peut intervenir dessus à tout moment. 
+Je ne me débrouillais pas du tout en PHP mais grace à ce dernier j'ai pu trouver mes repères et beaucoup m'améliorer. 
+Je regrette beaucoup de ne pas avoir commencé avec Bootstrap/Symfony, car le CSS m'a pris beaucoup de temps qui aurait pu être
+utilisé pour optimiser ou ajouter des fonctionnalités.
+Le développement du site est à l'arrêt pour des raisons personnelles à l'entreprise. 
+Je me suis arrêté à l'affichage de plusieurs images pour un article, j'allais ensuite faire un carrousel dans la page d'accueil.
+Ce projet m'a pour l'instant permis de grandement m'améliorer en PHP, SQL et CSS, ainsi que de découvrir un peu de Javascript.
