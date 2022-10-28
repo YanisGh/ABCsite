@@ -2,7 +2,7 @@
 Site (postponed) pour l'entreprise "Atelier 78". Code partagé avec l'accord de la responsable. Vous pouvez lire le fichier 'lisez-moi.txt" pour plus d'informations.  
 
 A propos du projet : 
-Le site est une plateforme pour l'entreprise où elle peut montrer ses services de vente/flocage/broderies de vetements, et y ajouter ses produits, les modifier et les supprimer. 
+Le site est une plateforme pour l'entreprise où elle peut montrer ses services de vente/flocage/broderies de vêtements, et y ajouter ses produits, les modifier et les supprimer. 
 Un système d'administrateurs est aussi en place, où seul ces derniers peuvent avoir accès aux fonctionnalités susmentionnées.
 Les utilisateurs peuvent consulter les différents services de l'entreprise et envoyer un mail à propos de ces derniers via différents formulaires, qui changent en fonction du service recherché.
 
